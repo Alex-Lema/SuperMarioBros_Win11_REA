@@ -1,0 +1,3277 @@
+{
+  "metadata": {
+    "rom_sha256": "f61548fdf1670cffefcc4f0b7bdcdd9eaba0c226e3b74f8666071496988248de",
+    "prg_sha256": "5374abb64cfb9b5d961856c60166cedc55859164cf2b8867730e144fa2bdd594",
+    "prg_size_bytes": 32768,
+    "chr_size_bytes": 8192,
+    "code_coverage": {
+      "instruction_and_operand_bytes": 18724,
+      "jump_table_pointer_bytes": 494,
+      "structured_data_bytes": 13550,
+      "discovered_subroutines": 533,
+      "jump_engine_tables": 18,
+      "jump_engine_total_pointers": 247,
+      "ghidra_auto_decompiled_procedures": 34
+    }
+  },
+  "jump_engine_tables": [
+    {
+      "name": "OperModeExecutionTree_Tbl",
+      "jsrAddr": "0x8212",
+      "tableAddr": "0x8215",
+      "count": 4,
+      "indexDesc": "OperMode ($0770): 0=TitleScreen, 1=Game, 2=Victory, 3=GameOver",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x8215",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x8217",
+          "target": "0x318E",
+          "targetNum": 12686
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x8219",
+          "target": "0xDC82",
+          "targetNum": 56450
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x821B",
+          "target": "0x8BAE",
+          "targetNum": 35758
+        }
+      ]
+    },
+    {
+      "name": "TitleScreenMode_Tbl",
+      "jsrAddr": "0x8231",
+      "tableAddr": "0x8234",
+      "count": 4,
+      "indexDesc": "OperMode_Task ($0772): 0=InitGame, 1=ScreenRoutines, 2=PrimaryGameSetup, 3=GameMenuRoutine",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x8234",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x8236",
+          "target": "0xCF8E",
+          "targetNum": 53134
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x8238",
+          "target": "0x678F",
+          "targetNum": 26511
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x823A",
+          "target": "0x6185",
+          "targetNum": 24965
+        }
+      ]
+    },
+    {
+      "name": "VictoryMode_Tbl",
+      "jsrAddr": "0x83A0",
+      "tableAddr": "0x83A3",
+      "count": 5,
+      "indexDesc": "OperMode_Task ($0772): 0=BridgeCollapse, 1=SetupVictoryMode, 2=PlayerEndWorld, 3=VictoryWalk, 4=PrintVictoryMessages",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x83A3",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x83A5",
+          "target": "0xEC8E",
+          "targetNum": 60558
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x83A7",
+          "target": "0xB0CF",
+          "targetNum": 45263
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x83A9",
+          "target": "0xBD83",
+          "targetNum": 48515
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0x83AB",
+          "target": "0xF683",
+          "targetNum": 63107
+        }
+      ]
+    },
+    {
+      "name": "ScreenRoutines_Tbl",
+      "jsrAddr": "0x8567",
+      "tableAddr": "0x856A",
+      "count": 15,
+      "indexDesc": "ScreenRoutineTask ($073C): 15-step PPU screen construction pipeline",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x856A",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x856C",
+          "target": "0x8B8E",
+          "targetNum": 35726
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x856E",
+          "target": "0x9B85",
+          "targetNum": 39813
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x8570",
+          "target": "0x5285",
+          "targetNum": 21125
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0x8572",
+          "target": "0x5A86",
+          "targetNum": 23174
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0x8574",
+          "target": "0x9386",
+          "targetNum": 37766
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0x8576",
+          "target": "0x9D86",
+          "targetNum": 40326
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0x8578",
+          "target": "0xA888",
+          "targetNum": 43144
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0x857A",
+          "target": "0x9D86",
+          "targetNum": 40326
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0x857C",
+          "target": "0xE688",
+          "targetNum": 59016
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0x857E",
+          "target": "0xBF86",
+          "targetNum": 49030
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0x8580",
+          "target": "0xE385",
+          "targetNum": 58245
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0x8582",
+          "target": "0x4385",
+          "targetNum": 17285
+        },
+        {
+          "index": 13,
+          "ptrAddr": "0x8584",
+          "target": "0xFF86",
+          "targetNum": 65414
+        },
+        {
+          "index": 14,
+          "ptrAddr": "0x8586",
+          "target": "0x3286",
+          "targetNum": 12934
+        }
+      ]
+    },
+    {
+      "name": "GameOverMode_Tbl",
+      "jsrAddr": "0x9218",
+      "tableAddr": "0x921B",
+      "count": 3,
+      "indexDesc": "OperMode_Task ($0772): 0=SetupGameOver, 1=ScreenRoutines, 2=RunGameOver",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x921B",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x921D",
+          "target": "0x248E",
+          "targetNum": 9358
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x921F",
+          "target": "0x6792",
+          "targetNum": 26514
+        }
+      ]
+    },
+    {
+      "name": "AreaStyleObject_Tbl",
+      "jsrAddr": "0x92C5",
+      "tableAddr": "0x92C8",
+      "count": 8,
+      "indexDesc": "AreaStyle ($0733): Row-0E area style specific object handlers",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x92C8",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x92CA",
+          "target": "0xDB8E",
+          "targetNum": 56206
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x92CC",
+          "target": "0xAE92",
+          "targetNum": 44690
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x92CE",
+          "target": "0xAE88",
+          "targetNum": 44680
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0x92D0",
+          "target": "0xFC88",
+          "targetNum": 64648
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0x92D2",
+          "target": "0xDB93",
+          "targetNum": 56211
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0x92D4",
+          "target": "0xAE92",
+          "targetNum": 44690
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0x92D6",
+          "target": "0xAE88",
+          "targetNum": 44680
+        }
+      ]
+    },
+    {
+      "name": "DecodeAreaData_Tbl",
+      "jsrAddr": "0x9661",
+      "tableAddr": "0x9664",
+      "count": 47,
+      "indexDesc": "Area object ID (47 terrain/scenery/block builders)",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x9664",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x9666",
+          "target": "0xE58E",
+          "targetNum": 58766
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x9668",
+          "target": "0x4098",
+          "targetNum": 16536
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0x966A",
+          "target": "0x2E97",
+          "targetNum": 11927
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0x966C",
+          "target": "0x3E9A",
+          "targetNum": 16026
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0x966E",
+          "target": "0xF29A",
+          "targetNum": 62106
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0x9670",
+          "target": "0x5099",
+          "targetNum": 20633
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0x9672",
+          "target": "0x599A",
+          "targetNum": 22938
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0x9674",
+          "target": "0xE59A",
+          "targetNum": 58778
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0x9676",
+          "target": "0x4198",
+          "targetNum": 16792
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0x9678",
+          "target": "0xBA9B",
+          "targetNum": 47771
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0x967A",
+          "target": "0x7997",
+          "targetNum": 31127
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0x967C",
+          "target": "0x7C99",
+          "targetNum": 31897
+        },
+        {
+          "index": 13,
+          "ptrAddr": "0x967E",
+          "target": "0x7F99",
+          "targetNum": 32665
+        },
+        {
+          "index": 14,
+          "ptrAddr": "0x9680",
+          "target": "0x5799",
+          "targetNum": 22425
+        },
+        {
+          "index": 15,
+          "ptrAddr": "0x9682",
+          "target": "0x6899",
+          "targetNum": 26777
+        },
+        {
+          "index": 16,
+          "ptrAddr": "0x9684",
+          "target": "0x6B99",
+          "targetNum": 27545
+        },
+        {
+          "index": 17,
+          "ptrAddr": "0x9686",
+          "target": "0xD099",
+          "targetNum": 53401
+        },
+        {
+          "index": 18,
+          "ptrAddr": "0x9688",
+          "target": "0xD799",
+          "targetNum": 55193
+        },
+        {
+          "index": 19,
+          "ptrAddr": "0x968A",
+          "target": "0x0699",
+          "targetNum": 1689
+        },
+        {
+          "index": 20,
+          "ptrAddr": "0x968C",
+          "target": "0xB798",
+          "targetNum": 47000
+        },
+        {
+          "index": 21,
+          "ptrAddr": "0x968E",
+          "target": "0xAB9A",
+          "targetNum": 43930
+        },
+        {
+          "index": 22,
+          "ptrAddr": "0x9690",
+          "target": "0x9498",
+          "targetNum": 38040
+        },
+        {
+          "index": 23,
+          "ptrAddr": "0x9692",
+          "target": "0x0E99",
+          "targetNum": 3737
+        },
+        {
+          "index": 24,
+          "ptrAddr": "0x9694",
+          "target": "0x0E9B",
+          "targetNum": 3739
+        },
+        {
+          "index": 25,
+          "ptrAddr": "0x9696",
+          "target": "0x0E9B",
+          "targetNum": 3739
+        },
+        {
+          "index": 26,
+          "ptrAddr": "0x9698",
+          "target": "0x019B",
+          "targetNum": 411
+        },
+        {
+          "index": 27,
+          "ptrAddr": "0x969A",
+          "target": "0x199B",
+          "targetNum": 6555
+        },
+        {
+          "index": 28,
+          "ptrAddr": "0x969C",
+          "target": "0x199B",
+          "targetNum": 6555
+        },
+        {
+          "index": 29,
+          "ptrAddr": "0x969E",
+          "target": "0x199B",
+          "targetNum": 6555
+        },
+        {
+          "index": 30,
+          "ptrAddr": "0x96A0",
+          "target": "0x149B",
+          "targetNum": 5275
+        },
+        {
+          "index": 31,
+          "ptrAddr": "0x96A2",
+          "target": "0x199B",
+          "targetNum": 6555
+        },
+        {
+          "index": 32,
+          "ptrAddr": "0x96A4",
+          "target": "0x6F9B",
+          "targetNum": 28571
+        },
+        {
+          "index": 33,
+          "ptrAddr": "0x96A6",
+          "target": "0x1998",
+          "targetNum": 6552
+        },
+        {
+          "index": 34,
+          "ptrAddr": "0x96A8",
+          "target": "0xD39A",
+          "targetNum": 54170
+        },
+        {
+          "index": 35,
+          "ptrAddr": "0x96AA",
+          "target": "0x829A",
+          "targetNum": 33434
+        },
+        {
+          "index": 36,
+          "ptrAddr": "0x96AC",
+          "target": "0x9E98",
+          "targetNum": 40600
+        },
+        {
+          "index": 37,
+          "ptrAddr": "0x96AE",
+          "target": "0x0999",
+          "targetNum": 2457
+        },
+        {
+          "index": 38,
+          "ptrAddr": "0x96B0",
+          "target": "0x0E9A",
+          "targetNum": 3738
+        },
+        {
+          "index": 39,
+          "ptrAddr": "0x96B2",
+          "target": "0x019A",
+          "targetNum": 410
+        },
+        {
+          "index": 40,
+          "ptrAddr": "0x96B4",
+          "target": "0xF29A",
+          "targetNum": 62106
+        },
+        {
+          "index": 41,
+          "ptrAddr": "0x96B6",
+          "target": "0x0D96",
+          "targetNum": 3478
+        },
+        {
+          "index": 42,
+          "ptrAddr": "0x96B8",
+          "target": "0x0D97",
+          "targetNum": 3479
+        },
+        {
+          "index": 43,
+          "ptrAddr": "0x96BA",
+          "target": "0x2B97",
+          "targetNum": 11159
+        },
+        {
+          "index": 44,
+          "ptrAddr": "0x96BC",
+          "target": "0x2B97",
+          "targetNum": 11159
+        },
+        {
+          "index": 45,
+          "ptrAddr": "0x96BE",
+          "target": "0x2B97",
+          "targetNum": 11159
+        },
+        {
+          "index": 46,
+          "ptrAddr": "0x96C0",
+          "target": "0x4597",
+          "targetNum": 17815
+        }
+      ]
+    },
+    {
+      "name": "LargeObject_Tbl",
+      "jsrAddr": "0x9740",
+      "tableAddr": "0x9743",
+      "count": 3,
+      "indexDesc": "Large scenery object subtype",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0x9743",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0x9745",
+          "target": "0x4C8E",
+          "targetNum": 19598
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0x9747",
+          "target": "0x7897",
+          "targetNum": 30871
+        }
+      ]
+    },
+    {
+      "name": "GameMode_Tbl",
+      "jsrAddr": "0xAEDC",
+      "tableAddr": "0xAEDF",
+      "count": 4,
+      "indexDesc": "OperMode_Task ($0772): 0=InitArea, 1=ScreenRoutines, 2=SecondaryGameSetup, 3=GameCoreRoutine",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xAEDF",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xAEE1",
+          "target": "0xE48E",
+          "targetNum": 58510
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xAEE3",
+          "target": "0x678F",
+          "targetNum": 26511
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xAEE5",
+          "target": "0x7185",
+          "targetNum": 29061
+        }
+      ]
+    },
+    {
+      "name": "GameRoutines_Tbl",
+      "jsrAddr": "0xB049",
+      "tableAddr": "0xB04C",
+      "count": 13,
+      "indexDesc": "GameEngineSubroutine ($000E): 13 player state/cutscene handlers",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xB04C",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xB04E",
+          "target": "0x318E",
+          "targetNum": 12686
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xB050",
+          "target": "0xC791",
+          "targetNum": 51089
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xB052",
+          "target": "0x06B1",
+          "targetNum": 1713
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xB054",
+          "target": "0xE5B2",
+          "targetNum": 58802
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xB056",
+          "target": "0xA4B1",
+          "targetNum": 42161
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xB058",
+          "target": "0xCAB2",
+          "targetNum": 51890
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0xB05A",
+          "target": "0xCDB2",
+          "targetNum": 52658
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0xB05C",
+          "target": "0x6991",
+          "targetNum": 27025
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0xB05E",
+          "target": "0xE9B0",
+          "targetNum": 59824
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0xB060",
+          "target": "0x33B0",
+          "targetNum": 13232
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0xB062",
+          "target": "0x45B2",
+          "targetNum": 17842
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0xB064",
+          "target": "0x69B2",
+          "targetNum": 27058
+        }
+      ]
+    },
+    {
+      "name": "PlayerFireFlower_Tbl",
+      "jsrAddr": "0xB34B",
+      "tableAddr": "0xB34E",
+      "count": 4,
+      "indexDesc": "Fire flower palette cycle stage",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xB34E",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xB350",
+          "target": "0x5A8E",
+          "targetNum": 23182
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xB352",
+          "target": "0x76B3",
+          "targetNum": 30387
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xB354",
+          "target": "0x6DB3",
+          "targetNum": 28083
+        }
+      ]
+    },
+    {
+      "name": "MiscObjectsCore_Tbl",
+      "jsrAddr": "0xBDBA",
+      "tableAddr": "0xBDBD",
+      "count": 9,
+      "indexDesc": "Misc_Object_ID ($002A,X): Hammers, coins, jumping coins, brick chunks",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xBDBD",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xBDBF",
+          "target": "0xD28E",
+          "targetNum": 53902
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xBDC1",
+          "target": "0x38BD",
+          "targetNum": 14525
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xBDC3",
+          "target": "0x38BB",
+          "targetNum": 14523
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xBDC5",
+          "target": "0xD8BB",
+          "targetNum": 55483
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xBDC7",
+          "target": "0xD2BD",
+          "targetNum": 53949
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xBDC9",
+          "target": "0xDFBD",
+          "targetNum": 57277
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0xBDCB",
+          "target": "0xD5BD",
+          "targetNum": 54717
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0xBDCD",
+          "target": "0x38BD",
+          "targetNum": 14525
+        }
+      ]
+    },
+    {
+      "name": "InitEnemyObject_Tbl",
+      "jsrAddr": "0xC27C",
+      "tableAddr": "0xC27F",
+      "count": 55,
+      "indexDesc": "Enemy_ID ($0016,X) initialization routines (0x00..0x36)",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xC27F",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xC281",
+          "target": "0x0E8E",
+          "targetNum": 3726
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xC283",
+          "target": "0x0EC3",
+          "targetNum": 3779
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xC285",
+          "target": "0x0EC3",
+          "targetNum": 3779
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xC287",
+          "target": "0x1EC3",
+          "targetNum": 7875
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xC289",
+          "target": "0xF0C3",
+          "targetNum": 61635
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xC28B",
+          "target": "0x28C2",
+          "targetNum": 10434
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0xC28D",
+          "target": "0xF1C3",
+          "targetNum": 61891
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0xC28F",
+          "target": "0x42C2",
+          "targetNum": 17090
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0xC291",
+          "target": "0x6BC3",
+          "targetNum": 27587
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0xC293",
+          "target": "0xF0C3",
+          "targetNum": 61635
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0xC295",
+          "target": "0x75C2",
+          "targetNum": 30146
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0xC297",
+          "target": "0x75C3",
+          "targetNum": 30147
+        },
+        {
+          "index": 13,
+          "ptrAddr": "0xC299",
+          "target": "0xF7C3",
+          "targetNum": 63427
+        },
+        {
+          "index": 14,
+          "ptrAddr": "0xC29B",
+          "target": "0x87C2",
+          "targetNum": 34754
+        },
+        {
+          "index": 15,
+          "ptrAddr": "0xC29D",
+          "target": "0xD1C7",
+          "targetNum": 53703
+        },
+        {
+          "index": 16,
+          "ptrAddr": "0xC29F",
+          "target": "0x4AC7",
+          "targetNum": 19143
+        },
+        {
+          "index": 17,
+          "ptrAddr": "0xC2A1",
+          "target": "0x3DC3",
+          "targetNum": 15811
+        },
+        {
+          "index": 18,
+          "ptrAddr": "0xC2A3",
+          "target": "0x85C3",
+          "targetNum": 34243
+        },
+        {
+          "index": 19,
+          "ptrAddr": "0xC2A5",
+          "target": "0xA0C3",
+          "targetNum": 41155
+        },
+        {
+          "index": 20,
+          "ptrAddr": "0xC2A7",
+          "target": "0xF0C7",
+          "targetNum": 61639
+        },
+        {
+          "index": 21,
+          "ptrAddr": "0xC2A9",
+          "target": "0xA0C2",
+          "targetNum": 41154
+        },
+        {
+          "index": 22,
+          "ptrAddr": "0xC2AB",
+          "target": "0xA0C7",
+          "targetNum": 41159
+        },
+        {
+          "index": 23,
+          "ptrAddr": "0xC2AD",
+          "target": "0xA0C7",
+          "targetNum": 41159
+        },
+        {
+          "index": 24,
+          "ptrAddr": "0xC2AF",
+          "target": "0xA0C7",
+          "targetNum": 41159
+        },
+        {
+          "index": 25,
+          "ptrAddr": "0xC2B1",
+          "target": "0xB8C7",
+          "targetNum": 47303
+        },
+        {
+          "index": 26,
+          "ptrAddr": "0xC2B3",
+          "target": "0xF0C7",
+          "targetNum": 61639
+        },
+        {
+          "index": 27,
+          "ptrAddr": "0xC2B5",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 28,
+          "ptrAddr": "0xC2B7",
+          "target": "0x5CC2",
+          "targetNum": 23746
+        },
+        {
+          "index": 29,
+          "ptrAddr": "0xC2B9",
+          "target": "0x5CC4",
+          "targetNum": 23748
+        },
+        {
+          "index": 30,
+          "ptrAddr": "0xC2BB",
+          "target": "0x5CC4",
+          "targetNum": 23748
+        },
+        {
+          "index": 31,
+          "ptrAddr": "0xC2BD",
+          "target": "0x5CC4",
+          "targetNum": 23748
+        },
+        {
+          "index": 32,
+          "ptrAddr": "0xC2BF",
+          "target": "0x59C4",
+          "targetNum": 22980
+        },
+        {
+          "index": 33,
+          "ptrAddr": "0xC2C1",
+          "target": "0xF0C4",
+          "targetNum": 61636
+        },
+        {
+          "index": 34,
+          "ptrAddr": "0xC2C3",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 35,
+          "ptrAddr": "0xC2C5",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 36,
+          "ptrAddr": "0xC2C7",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 37,
+          "ptrAddr": "0xC2C9",
+          "target": "0xDFC2",
+          "targetNum": 57282
+        },
+        {
+          "index": 38,
+          "ptrAddr": "0xC2CB",
+          "target": "0x12C7",
+          "targetNum": 4807
+        },
+        {
+          "index": 39,
+          "ptrAddr": "0xC2CD",
+          "target": "0x3FC8",
+          "targetNum": 16328
+        },
+        {
+          "index": 40,
+          "ptrAddr": "0xC2CF",
+          "target": "0x45C8",
+          "targetNum": 17864
+        },
+        {
+          "index": 41,
+          "ptrAddr": "0xC2D1",
+          "target": "0x0BC8",
+          "targetNum": 3016
+        },
+        {
+          "index": 42,
+          "ptrAddr": "0xC2D3",
+          "target": "0x03C8",
+          "targetNum": 968
+        },
+        {
+          "index": 43,
+          "ptrAddr": "0xC2D5",
+          "target": "0x0BC8",
+          "targetNum": 3016
+        },
+        {
+          "index": 44,
+          "ptrAddr": "0xC2D7",
+          "target": "0x4BC8",
+          "targetNum": 19400
+        },
+        {
+          "index": 45,
+          "ptrAddr": "0xC2D9",
+          "target": "0x57C8",
+          "targetNum": 22472
+        },
+        {
+          "index": 46,
+          "ptrAddr": "0xC2DB",
+          "target": "0x49C8",
+          "targetNum": 18888
+        },
+        {
+          "index": 47,
+          "ptrAddr": "0xC2DD",
+          "target": "0x60C5",
+          "targetNum": 24773
+        },
+        {
+          "index": 48,
+          "ptrAddr": "0xC2DF",
+          "target": "0x1EBC",
+          "targetNum": 7868
+        },
+        {
+          "index": 49,
+          "ptrAddr": "0xC2E1",
+          "target": "0xF0B9",
+          "targetNum": 61625
+        },
+        {
+          "index": 50,
+          "ptrAddr": "0xC2E3",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 51,
+          "ptrAddr": "0xC2E5",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 52,
+          "ptrAddr": "0xC2E7",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 53,
+          "ptrAddr": "0xC2E9",
+          "target": "0xF0C2",
+          "targetNum": 61634
+        },
+        {
+          "index": 54,
+          "ptrAddr": "0xC2EB",
+          "target": "0x07C2",
+          "targetNum": 1986
+        }
+      ]
+    },
+    {
+      "name": "EnemyGfxHandler_Tbl",
+      "jsrAddr": "0xC7A5",
+      "tableAddr": "0xC7A8",
+      "count": 6,
+      "indexDesc": "Special enemy graphics dispatch",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xC7A8",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xC7AA",
+          "target": "0xA48E",
+          "targetNum": 42126
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xC7AC",
+          "target": "0xB7C3",
+          "targetNum": 47043
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xC7AE",
+          "target": "0xA8C7",
+          "targetNum": 43207
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xC7B0",
+          "target": "0xA3C4",
+          "targetNum": 41924
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xC7B2",
+          "target": "0x3DC5",
+          "targetNum": 15813
+        }
+      ]
+    },
+    {
+      "name": "RunEngineSubroutine_Tbl",
+      "jsrAddr": "0xC88C",
+      "tableAddr": "0xC88F",
+      "count": 34,
+      "indexDesc": "Enemy_State/ID per-frame execution dispatch (34 handlers)",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xC88F",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xC891",
+          "target": "0xE08E",
+          "targetNum": 57486
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xC893",
+          "target": "0x35C8",
+          "targetNum": 13768
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xC895",
+          "target": "0x95C9",
+          "targetNum": 38345
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xC897",
+          "target": "0xD6D2",
+          "targetNum": 54994
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xC899",
+          "target": "0xD6C8",
+          "targetNum": 54984
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xC89B",
+          "target": "0xD6C8",
+          "targetNum": 54984
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0xC89D",
+          "target": "0xD6C8",
+          "targetNum": 54984
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0xC89F",
+          "target": "0x47C8",
+          "targetNum": 18376
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0xC8A1",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0xC8A3",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0xC8A5",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0xC8A7",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 13,
+          "ptrAddr": "0xC8A9",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 14,
+          "ptrAddr": "0xC8AB",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 15,
+          "ptrAddr": "0xC8AD",
+          "target": "0x47C9",
+          "targetNum": 18377
+        },
+        {
+          "index": 16,
+          "ptrAddr": "0xC8AF",
+          "target": "0xD6C9",
+          "targetNum": 54985
+        },
+        {
+          "index": 17,
+          "ptrAddr": "0xC8B1",
+          "target": "0x65C8",
+          "targetNum": 26056
+        },
+        {
+          "index": 18,
+          "ptrAddr": "0xC8B3",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 19,
+          "ptrAddr": "0xC8B5",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 20,
+          "ptrAddr": "0xC8B7",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 21,
+          "ptrAddr": "0xC8B9",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 22,
+          "ptrAddr": "0xC8BB",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 23,
+          "ptrAddr": "0xC8BD",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 24,
+          "ptrAddr": "0xC8BF",
+          "target": "0x4DC9",
+          "targetNum": 19913
+        },
+        {
+          "index": 25,
+          "ptrAddr": "0xC8C1",
+          "target": "0x4DC9",
+          "targetNum": 19913
+        },
+        {
+          "index": 26,
+          "ptrAddr": "0xC8C3",
+          "target": "0x65C9",
+          "targetNum": 26057
+        },
+        {
+          "index": 27,
+          "ptrAddr": "0xC8C5",
+          "target": "0x85D0",
+          "targetNum": 34256
+        },
+        {
+          "index": 28,
+          "ptrAddr": "0xC8C7",
+          "target": "0x4BBC",
+          "targetNum": 19388
+        },
+        {
+          "index": 29,
+          "ptrAddr": "0xC8C9",
+          "target": "0xD6B9",
+          "targetNum": 54969
+        },
+        {
+          "index": 30,
+          "ptrAddr": "0xC8CB",
+          "target": "0xD9C8",
+          "targetNum": 55752
+        },
+        {
+          "index": 31,
+          "ptrAddr": "0xC8CD",
+          "target": "0xBAD2",
+          "targetNum": 47826
+        },
+        {
+          "index": 32,
+          "ptrAddr": "0xC8CF",
+          "target": "0xD6B8",
+          "targetNum": 54968
+        },
+        {
+          "index": 33,
+          "ptrAddr": "0xC8D1",
+          "target": "0xA4C8",
+          "targetNum": 42184
+        }
+      ]
+    },
+    {
+      "name": "RunNormalEnemies_Tbl",
+      "jsrAddr": "0xC904",
+      "tableAddr": "0xC907",
+      "count": 21,
+      "indexDesc": "Enemy_ID ($0016,X): 21 normal enemy AI/physics routines",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xC907",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xC909",
+          "target": "0x778E",
+          "targetNum": 30606
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xC90B",
+          "target": "0x77CA",
+          "targetNum": 30666
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xC90D",
+          "target": "0x77CA",
+          "targetNum": 30666
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xC90F",
+          "target": "0x77CA",
+          "targetNum": 30666
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xC911",
+          "target": "0x77CA",
+          "targetNum": 30666
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xC913",
+          "target": "0xD8CA",
+          "targetNum": 55498
+        },
+        {
+          "index": 7,
+          "ptrAddr": "0xC915",
+          "target": "0x77C9",
+          "targetNum": 30665
+        },
+        {
+          "index": 8,
+          "ptrAddr": "0xC917",
+          "target": "0x89CA",
+          "targetNum": 35274
+        },
+        {
+          "index": 9,
+          "ptrAddr": "0xC919",
+          "target": "0x36CB",
+          "targetNum": 14027
+        },
+        {
+          "index": 10,
+          "ptrAddr": "0xC91B",
+          "target": "0x34CC",
+          "targetNum": 13516
+        },
+        {
+          "index": 11,
+          "ptrAddr": "0xC91D",
+          "target": "0x4AC9",
+          "targetNum": 19145
+        },
+        {
+          "index": 12,
+          "ptrAddr": "0xC91F",
+          "target": "0x4ACC",
+          "targetNum": 19148
+        },
+        {
+          "index": 13,
+          "ptrAddr": "0xC921",
+          "target": "0xB0CC",
+          "targetNum": 45260
+        },
+        {
+          "index": 14,
+          "ptrAddr": "0xC923",
+          "target": "0xB0C9",
+          "targetNum": 45257
+        },
+        {
+          "index": 15,
+          "ptrAddr": "0xC925",
+          "target": "0xF9D3",
+          "targetNum": 63955
+        },
+        {
+          "index": 16,
+          "ptrAddr": "0xC927",
+          "target": "0xFFCA",
+          "targetNum": 65482
+        },
+        {
+          "index": 17,
+          "ptrAddr": "0xC929",
+          "target": "0x25CA",
+          "targetNum": 9674
+        },
+        {
+          "index": 18,
+          "ptrAddr": "0xC92B",
+          "target": "0x28CB",
+          "targetNum": 10443
+        },
+        {
+          "index": 19,
+          "ptrAddr": "0xC92D",
+          "target": "0x77CF",
+          "targetNum": 30671
+        },
+        {
+          "index": 20,
+          "ptrAddr": "0xC92F",
+          "target": "0x34CA",
+          "targetNum": 13514
+        }
+      ]
+    },
+    {
+      "name": "BowserGfx_Tbl",
+      "jsrAddr": "0xC984",
+      "tableAddr": "0xC987",
+      "count": 7,
+      "indexDesc": "Bowser/flame auxiliary routines",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xC987",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xC989",
+          "target": "0x328E",
+          "targetNum": 12942
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xC98B",
+          "target": "0xD3D4",
+          "targetNum": 54228
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xC98D",
+          "target": "0x4FD5",
+          "targetNum": 20437
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xC98F",
+          "target": "0x4FD6",
+          "targetNum": 20438
+        },
+        {
+          "index": 5,
+          "ptrAddr": "0xC991",
+          "target": "0x07D6",
+          "targetNum": 2006
+        },
+        {
+          "index": 6,
+          "ptrAddr": "0xC993",
+          "target": "0x31D6",
+          "targetNum": 12758
+        }
+      ]
+    },
+    {
+      "name": "PowerUpObjHandler_Tbl",
+      "jsrAddr": "0xD2E2",
+      "tableAddr": "0xD2E5",
+      "count": 5,
+      "indexDesc": "PowerUpType ($0039): Mushroom, Fire Flower, Starman, 1-Up, Vine",
+      "entries": [
+        {
+          "index": 0,
+          "ptrAddr": "0xD2E5",
+          "target": "0x0420",
+          "targetNum": 1056
+        },
+        {
+          "index": 1,
+          "ptrAddr": "0xD2E7",
+          "target": "0x118E",
+          "targetNum": 4494
+        },
+        {
+          "index": 2,
+          "ptrAddr": "0xD2E9",
+          "target": "0xF2D3",
+          "targetNum": 62163
+        },
+        {
+          "index": 3,
+          "ptrAddr": "0xD2EB",
+          "target": "0x12D2",
+          "targetNum": 4818
+        },
+        {
+          "index": 4,
+          "ptrAddr": "0xD2ED",
+          "target": "0x4ED3",
+          "targetNum": 20179
+        }
+      ]
+    }
+  ],
+  "world_and_area_tables": {
+    "world_addr_offsets_0x9CB4": [
+      0,
+      5,
+      10,
+      14,
+      19,
+      23,
+      27,
+      32
+    ],
+    "area_addr_offsets_0x9CBC": [
+      37,
+      41,
+      192,
+      38,
+      96,
+      40,
+      41,
+      1,
+      39,
+      98,
+      36,
+      53,
+      32,
+      99,
+      34,
+      41,
+      65,
+      44,
+      97,
+      42,
+      49,
+      38,
+      98,
+      46,
+      35,
+      45,
+      96,
+      51,
+      41,
+      1,
+      39,
+      100,
+      48,
+      50,
+      33,
+      101
+    ],
+    "enemy_addr_h_offsets_0x9CE0": [
+      31,
+      6,
+      28,
+      0
+    ],
+    "area_data_h_offsets_0x9D28": [
+      0,
+      3,
+      25,
+      28
+    ],
+    "world_level_progression": [
+      {
+        "world": 1,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x25",
+        "area_type": "Ground",
+        "area_sub_index": 5,
+        "global_area_table_index": 8,
+        "area_data_ptr": "0xA68E",
+        "enemy_data_ptr": "0x9E9B"
+      },
+      {
+        "world": 1,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x29",
+        "area_type": "Ground",
+        "area_sub_index": 9,
+        "global_area_table_index": 12,
+        "area_data_ptr": "0xA832",
+        "enemy_data_ptr": "0x9F1F"
+      },
+      {
+        "world": 1,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0xC0",
+        "area_type": "Underground",
+        "area_sub_index": 0,
+        "global_area_table_index": 25,
+        "area_data_ptr": "0xAC35",
+        "enemy_data_ptr": "0xA08E"
+      },
+      {
+        "world": 1,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x26",
+        "area_type": "Ground",
+        "area_sub_index": 6,
+        "global_area_table_index": 9,
+        "area_data_ptr": "0xA6F3",
+        "enemy_data_ptr": "0x9EA9"
+      },
+      {
+        "world": 1,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x60",
+        "area_type": "Castle",
+        "area_sub_index": 0,
+        "global_area_table_index": 28,
+        "area_data_ptr": "0xA1AF",
+        "enemy_data_ptr": "0xA0D8"
+      },
+      {
+        "world": 2,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x28",
+        "area_type": "Ground",
+        "area_sub_index": 8,
+        "global_area_table_index": 11,
+        "area_data_ptr": "0xA7CD",
+        "enemy_data_ptr": "0x9F01"
+      },
+      {
+        "world": 2,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x29",
+        "area_type": "Ground",
+        "area_sub_index": 9,
+        "global_area_table_index": 12,
+        "area_data_ptr": "0xA832",
+        "enemy_data_ptr": "0x9F1F"
+      },
+      {
+        "world": 2,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x01",
+        "area_type": "Water",
+        "area_sub_index": 1,
+        "global_area_table_index": 1,
+        "area_data_ptr": "0xAE45",
+        "enemy_data_ptr": "0x9D97"
+      },
+      {
+        "world": 2,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x27",
+        "area_type": "Ground",
+        "area_sub_index": 7,
+        "global_area_table_index": 10,
+        "area_data_ptr": "0xA748",
+        "enemy_data_ptr": "0x9ED0"
+      },
+      {
+        "world": 2,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x62",
+        "area_type": "Castle",
+        "area_sub_index": 2,
+        "global_area_table_index": 30,
+        "area_data_ptr": "0xA28F",
+        "enemy_data_ptr": "0xA133"
+      },
+      {
+        "world": 3,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x24",
+        "area_type": "Ground",
+        "area_sub_index": 4,
+        "global_area_table_index": 7,
+        "area_data_ptr": "0xA619",
+        "enemy_data_ptr": "0x9E7E"
+      },
+      {
+        "world": 3,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x35",
+        "area_type": "Ground",
+        "area_sub_index": 21,
+        "global_area_table_index": 24,
+        "area_data_ptr": "0xAC02",
+        "enemy_data_ptr": "0xA060"
+      },
+      {
+        "world": 3,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x20",
+        "area_type": "Ground",
+        "area_sub_index": 0,
+        "global_area_table_index": 3,
+        "area_data_ptr": "0xA46B",
+        "enemy_data_ptr": "0x9DDF"
+      },
+      {
+        "world": 3,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x63",
+        "area_type": "Castle",
+        "area_sub_index": 3,
+        "global_area_table_index": 31,
+        "area_data_ptr": "0xA302",
+        "enemy_data_ptr": "0xA160"
+      },
+      {
+        "world": 3,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x22",
+        "area_type": "Ground",
+        "area_sub_index": 2,
+        "global_area_table_index": 5,
+        "area_data_ptr": "0xA537",
+        "enemy_data_ptr": "0x9E1F"
+      },
+      {
+        "world": 4,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x22",
+        "area_type": "Ground",
+        "area_sub_index": 2,
+        "global_area_table_index": 5,
+        "area_data_ptr": "0xA537",
+        "enemy_data_ptr": "0x9E1F"
+      },
+      {
+        "world": 4,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x29",
+        "area_type": "Ground",
+        "area_sub_index": 9,
+        "global_area_table_index": 12,
+        "area_data_ptr": "0xA832",
+        "enemy_data_ptr": "0x9F1F"
+      },
+      {
+        "world": 4,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x41",
+        "area_type": "Underground",
+        "area_sub_index": 1,
+        "global_area_table_index": 26,
+        "area_data_ptr": "0xACD8",
+        "enemy_data_ptr": "0xA0AA"
+      },
+      {
+        "world": 4,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x2C",
+        "area_type": "Ground",
+        "area_sub_index": 12,
+        "global_area_table_index": 15,
+        "area_data_ptr": "0xA88F",
+        "enemy_data_ptr": "0x9F7B"
+      },
+      {
+        "world": 4,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x61",
+        "area_type": "Castle",
+        "area_sub_index": 1,
+        "global_area_table_index": 29,
+        "area_data_ptr": "0xA210",
+        "enemy_data_ptr": "0xA105"
+      },
+      {
+        "world": 5,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x2A",
+        "area_type": "Ground",
+        "area_sub_index": 10,
+        "global_area_table_index": 13,
+        "area_data_ptr": "0xA83B",
+        "enemy_data_ptr": "0x9F3C"
+      },
+      {
+        "world": 5,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x31",
+        "area_type": "Ground",
+        "area_sub_index": 17,
+        "global_area_table_index": 20,
+        "area_data_ptr": "0xAA92",
+        "enemy_data_ptr": "0x9FF1"
+      },
+      {
+        "world": 5,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x26",
+        "area_type": "Ground",
+        "area_sub_index": 6,
+        "global_area_table_index": 9,
+        "area_data_ptr": "0xA6F3",
+        "enemy_data_ptr": "0x9EA9"
+      },
+      {
+        "world": 5,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x62",
+        "area_type": "Castle",
+        "area_sub_index": 2,
+        "global_area_table_index": 30,
+        "area_data_ptr": "0xA28F",
+        "enemy_data_ptr": "0xA133"
+      },
+      {
+        "world": 5,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x2E",
+        "area_type": "Ground",
+        "area_sub_index": 14,
+        "global_area_table_index": 17,
+        "area_data_ptr": "0xA95B",
+        "enemy_data_ptr": "0x9FA0"
+      },
+      {
+        "world": 6,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x2E",
+        "area_type": "Ground",
+        "area_sub_index": 14,
+        "global_area_table_index": 17,
+        "area_data_ptr": "0xA95B",
+        "enemy_data_ptr": "0x9FA0"
+      },
+      {
+        "world": 6,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x23",
+        "area_type": "Ground",
+        "area_sub_index": 3,
+        "global_area_table_index": 6,
+        "area_data_ptr": "0xA58A",
+        "enemy_data_ptr": "0x9E59"
+      },
+      {
+        "world": 6,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x2D",
+        "area_type": "Ground",
+        "area_sub_index": 13,
+        "global_area_table_index": 16,
+        "area_data_ptr": "0xA8F6",
+        "enemy_data_ptr": "0x9F7C"
+      },
+      {
+        "world": 6,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x60",
+        "area_type": "Castle",
+        "area_sub_index": 0,
+        "global_area_table_index": 28,
+        "area_data_ptr": "0xA1AF",
+        "enemy_data_ptr": "0xA0D8"
+      },
+      {
+        "world": 6,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x33",
+        "area_type": "Ground",
+        "area_sub_index": 19,
+        "global_area_table_index": 22,
+        "area_data_ptr": "0xAB7E",
+        "enemy_data_ptr": "0x9FFB"
+      },
+      {
+        "world": 7,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x33",
+        "area_type": "Ground",
+        "area_sub_index": 19,
+        "global_area_table_index": 22,
+        "area_data_ptr": "0xAB7E",
+        "enemy_data_ptr": "0x9FFB"
+      },
+      {
+        "world": 7,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x29",
+        "area_type": "Ground",
+        "area_sub_index": 9,
+        "global_area_table_index": 12,
+        "area_data_ptr": "0xA832",
+        "enemy_data_ptr": "0x9F1F"
+      },
+      {
+        "world": 7,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x01",
+        "area_type": "Water",
+        "area_sub_index": 1,
+        "global_area_table_index": 1,
+        "area_data_ptr": "0xAE45",
+        "enemy_data_ptr": "0x9D97"
+      },
+      {
+        "world": 7,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x27",
+        "area_type": "Ground",
+        "area_sub_index": 7,
+        "global_area_table_index": 10,
+        "area_data_ptr": "0xA748",
+        "enemy_data_ptr": "0x9ED0"
+      },
+      {
+        "world": 7,
+        "slot_in_world": 4,
+        "raw_area_pointer_byte": "0x64",
+        "area_type": "Castle",
+        "area_sub_index": 4,
+        "global_area_table_index": 32,
+        "area_data_ptr": "0xA36F",
+        "enemy_data_ptr": "0xA171"
+      },
+      {
+        "world": 8,
+        "slot_in_world": 0,
+        "raw_area_pointer_byte": "0x30",
+        "area_type": "Ground",
+        "area_sub_index": 16,
+        "global_area_table_index": 19,
+        "area_data_ptr": "0xA9FF",
+        "enemy_data_ptr": "0x9FCE"
+      },
+      {
+        "world": 8,
+        "slot_in_world": 1,
+        "raw_area_pointer_byte": "0x32",
+        "area_type": "Ground",
+        "area_sub_index": 18,
+        "global_area_table_index": 21,
+        "area_data_ptr": "0xAB05",
+        "enemy_data_ptr": "0x9FFA"
+      },
+      {
+        "world": 8,
+        "slot_in_world": 2,
+        "raw_area_pointer_byte": "0x21",
+        "area_type": "Ground",
+        "area_sub_index": 1,
+        "global_area_table_index": 4,
+        "area_data_ptr": "0xA4CE",
+        "enemy_data_ptr": "0x9E0A"
+      },
+      {
+        "world": 8,
+        "slot_in_world": 3,
+        "raw_area_pointer_byte": "0x65",
+        "area_type": "Castle",
+        "area_sub_index": 5,
+        "global_area_table_index": 33,
+        "area_data_ptr": "0xA3FA",
+        "enemy_data_ptr": "0xA19B"
+      }
+    ],
+    "unique_areas_catalog": [
+      {
+        "area_table_index": 0,
+        "area_type": "Water",
+        "area_type_id": 0,
+        "area_data_ptr": "0xAE06",
+        "enemy_data_ptr": "0x9D70",
+        "header_bytes": [
+          "0x41",
+          "0x01"
+        ],
+        "terrain_object_count": 30,
+        "terrain_byte_length": 63,
+        "enemy_object_count": 19,
+        "enemy_byte_length": 39
+      },
+      {
+        "area_table_index": 1,
+        "area_type": "Water",
+        "area_type_id": 0,
+        "area_data_ptr": "0xAE45",
+        "enemy_data_ptr": "0x9D97",
+        "header_bytes": [
+          "0x41",
+          "0x01"
+        ],
+        "terrain_object_count": 60,
+        "terrain_byte_length": 123,
+        "enemy_object_count": 12,
+        "enemy_byte_length": 25
+      },
+      {
+        "area_table_index": 2,
+        "area_type": "Water",
+        "area_type_id": 0,
+        "area_data_ptr": "0xAEC0",
+        "enemy_data_ptr": "0x9DB0",
+        "header_bytes": [
+          "0x49",
+          "0x0F"
+        ],
+        "terrain_object_count": 12,
+        "terrain_byte_length": 27,
+        "enemy_object_count": 23,
+        "enemy_byte_length": 47
+      },
+      {
+        "area_table_index": 3,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA46B",
+        "enemy_data_ptr": "0x9DDF",
+        "header_bytes": [
+          "0x94",
+          "0x11"
+        ],
+        "terrain_object_count": 48,
+        "terrain_byte_length": 99,
+        "enemy_object_count": 21,
+        "enemy_byte_length": 43
+      },
+      {
+        "area_table_index": 4,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA4CE",
+        "enemy_data_ptr": "0x9E0A",
+        "header_bytes": [
+          "0x90",
+          "0xB1"
+        ],
+        "terrain_object_count": 51,
+        "terrain_byte_length": 105,
+        "enemy_object_count": 10,
+        "enemy_byte_length": 21
+      },
+      {
+        "area_table_index": 5,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA537",
+        "enemy_data_ptr": "0x9E1F",
+        "header_bytes": [
+          "0x52",
+          "0x21"
+        ],
+        "terrain_object_count": 40,
+        "terrain_byte_length": 83,
+        "enemy_object_count": 25,
+        "enemy_byte_length": 58
+      },
+      {
+        "area_table_index": 6,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA58A",
+        "enemy_data_ptr": "0x9E59",
+        "header_bytes": [
+          "0x54",
+          "0x21"
+        ],
+        "terrain_object_count": 70,
+        "terrain_byte_length": 143,
+        "enemy_object_count": 18,
+        "enemy_byte_length": 37
+      },
+      {
+        "area_table_index": 7,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA619",
+        "enemy_data_ptr": "0x9E7E",
+        "header_bytes": [
+          "0x52",
+          "0x31"
+        ],
+        "terrain_object_count": 57,
+        "terrain_byte_length": 117,
+        "enemy_object_count": 14,
+        "enemy_byte_length": 29
+      },
+      {
+        "area_table_index": 8,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA68E",
+        "enemy_data_ptr": "0x9E9B",
+        "header_bytes": [
+          "0x50",
+          "0x21"
+        ],
+        "terrain_object_count": 49,
+        "terrain_byte_length": 101,
+        "enemy_object_count": 6,
+        "enemy_byte_length": 14
+      },
+      {
+        "area_table_index": 9,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA6F3",
+        "enemy_data_ptr": "0x9EA9",
+        "header_bytes": [
+          "0x90",
+          "0x11"
+        ],
+        "terrain_object_count": 41,
+        "terrain_byte_length": 85,
+        "enemy_object_count": 17,
+        "enemy_byte_length": 39
+      },
+      {
+        "area_table_index": 10,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA748",
+        "enemy_data_ptr": "0x9ED0",
+        "header_bytes": [
+          "0x90",
+          "0x11"
+        ],
+        "terrain_object_count": 65,
+        "terrain_byte_length": 133,
+        "enemy_object_count": 23,
+        "enemy_byte_length": 49
+      },
+      {
+        "area_table_index": 11,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA7CD",
+        "enemy_data_ptr": "0x9F01",
+        "header_bytes": [
+          "0x52",
+          "0x31"
+        ],
+        "terrain_object_count": 49,
+        "terrain_byte_length": 101,
+        "enemy_object_count": 14,
+        "enemy_byte_length": 30
+      },
+      {
+        "area_table_index": 12,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA832",
+        "enemy_data_ptr": "0x9F1F",
+        "header_bytes": [
+          "0x38",
+          "0x11"
+        ],
+        "terrain_object_count": 3,
+        "terrain_byte_length": 9,
+        "enemy_object_count": 14,
+        "enemy_byte_length": 29
+      },
+      {
+        "area_table_index": 13,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA83B",
+        "enemy_data_ptr": "0x9F3C",
+        "header_bytes": [
+          "0x95",
+          "0xB1"
+        ],
+        "terrain_object_count": 30,
+        "terrain_byte_length": 63,
+        "enemy_object_count": 10,
+        "enemy_byte_length": 21
+      },
+      {
+        "area_table_index": 14,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA87A",
+        "enemy_data_ptr": "0x9F51",
+        "header_bytes": [
+          "0x00",
+          "0xC1"
+        ],
+        "terrain_object_count": 9,
+        "terrain_byte_length": 21,
+        "enemy_object_count": 20,
+        "enemy_byte_length": 43
+      },
+      {
+        "area_table_index": 15,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA88F",
+        "enemy_data_ptr": "0x9F7B",
+        "header_bytes": [
+          "0x90",
+          "0x51"
+        ],
+        "terrain_object_count": 50,
+        "terrain_byte_length": 103,
+        "enemy_object_count": 0,
+        "enemy_byte_length": 1
+      },
+      {
+        "area_table_index": 16,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA8F6",
+        "enemy_data_ptr": "0x9F7C",
+        "header_bytes": [
+          "0x97",
+          "0x11"
+        ],
+        "terrain_object_count": 49,
+        "terrain_byte_length": 101,
+        "enemy_object_count": 17,
+        "enemy_byte_length": 36
+      },
+      {
+        "area_table_index": 17,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA95B",
+        "enemy_data_ptr": "0x9FA0",
+        "header_bytes": [
+          "0x52",
+          "0x21"
+        ],
+        "terrain_object_count": 56,
+        "terrain_byte_length": 115,
+        "enemy_object_count": 3,
+        "enemy_byte_length": 9
+      },
+      {
+        "area_table_index": 18,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA9CE",
+        "enemy_data_ptr": "0x9FA9",
+        "header_bytes": [
+          "0x10",
+          "0x51"
+        ],
+        "terrain_object_count": 23,
+        "terrain_byte_length": 49,
+        "enemy_object_count": 18,
+        "enemy_byte_length": 37
+      },
+      {
+        "area_table_index": 19,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xA9FF",
+        "enemy_data_ptr": "0x9FCE",
+        "header_bytes": [
+          "0x92",
+          "0x31"
+        ],
+        "terrain_object_count": 72,
+        "terrain_byte_length": 147,
+        "enemy_object_count": 17,
+        "enemy_byte_length": 35
+      },
+      {
+        "area_table_index": 20,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xAA92",
+        "enemy_data_ptr": "0x9FF1",
+        "header_bytes": [
+          "0x55",
+          "0xB1"
+        ],
+        "terrain_object_count": 56,
+        "terrain_byte_length": 115,
+        "enemy_object_count": 4,
+        "enemy_byte_length": 9
+      },
+      {
+        "area_table_index": 21,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xAB05",
+        "enemy_data_ptr": "0x9FFA",
+        "header_bytes": [
+          "0x50",
+          "0xB1"
+        ],
+        "terrain_object_count": 59,
+        "terrain_byte_length": 121,
+        "enemy_object_count": 0,
+        "enemy_byte_length": 1
+      },
+      {
+        "area_table_index": 22,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xAB7E",
+        "enemy_data_ptr": "0x9FFB",
+        "header_bytes": [
+          "0x52",
+          "0xB1"
+        ],
+        "terrain_object_count": 43,
+        "terrain_byte_length": 89,
+        "enemy_object_count": 28,
+        "enemy_byte_length": 58
+      },
+      {
+        "area_table_index": 23,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xABD7",
+        "enemy_data_ptr": "0xA035",
+        "header_bytes": [
+          "0x06",
+          "0xC1"
+        ],
+        "terrain_object_count": 20,
+        "terrain_byte_length": 43,
+        "enemy_object_count": 20,
+        "enemy_byte_length": 43
+      },
+      {
+        "area_table_index": 24,
+        "area_type": "Ground",
+        "area_type_id": 1,
+        "area_data_ptr": "0xAC02",
+        "enemy_data_ptr": "0xA060",
+        "header_bytes": [
+          "0x96",
+          "0x31"
+        ],
+        "terrain_object_count": 24,
+        "terrain_byte_length": 51,
+        "enemy_object_count": 22,
+        "enemy_byte_length": 46
+      },
+      {
+        "area_table_index": 25,
+        "area_type": "Underground",
+        "area_type_id": 2,
+        "area_data_ptr": "0xAC35",
+        "enemy_data_ptr": "0xA08E",
+        "header_bytes": [
+          "0x48",
+          "0x0F"
+        ],
+        "terrain_object_count": 80,
+        "terrain_byte_length": 163,
+        "enemy_object_count": 13,
+        "enemy_byte_length": 28
+      },
+      {
+        "area_table_index": 26,
+        "area_type": "Underground",
+        "area_type_id": 2,
+        "area_data_ptr": "0xACD8",
+        "enemy_data_ptr": "0xA0AA",
+        "header_bytes": [
+          "0x48",
+          "0x0F"
+        ],
+        "terrain_object_count": 79,
+        "terrain_byte_length": 161,
+        "enemy_object_count": 3,
+        "enemy_byte_length": 9
+      },
+      {
+        "area_table_index": 27,
+        "area_type": "Underground",
+        "area_type_id": 2,
+        "area_data_ptr": "0xAD79",
+        "enemy_data_ptr": "0xA0B3",
+        "header_bytes": [
+          "0x48",
+          "0x01"
+        ],
+        "terrain_object_count": 69,
+        "terrain_byte_length": 141,
+        "enemy_object_count": 18,
+        "enemy_byte_length": 37
+      },
+      {
+        "area_table_index": 28,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA1AF",
+        "enemy_data_ptr": "0xA0D8",
+        "header_bytes": [
+          "0x9B",
+          "0x07"
+        ],
+        "terrain_object_count": 47,
+        "terrain_byte_length": 97,
+        "enemy_object_count": 21,
+        "enemy_byte_length": 45
+      },
+      {
+        "area_table_index": 29,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA210",
+        "enemy_data_ptr": "0xA105",
+        "header_bytes": [
+          "0x5B",
+          "0x07"
+        ],
+        "terrain_object_count": 62,
+        "terrain_byte_length": 127,
+        "enemy_object_count": 21,
+        "enemy_byte_length": 46
+      },
+      {
+        "area_table_index": 30,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA28F",
+        "enemy_data_ptr": "0xA133",
+        "header_bytes": [
+          "0x9B",
+          "0x07"
+        ],
+        "terrain_object_count": 56,
+        "terrain_byte_length": 115,
+        "enemy_object_count": 16,
+        "enemy_byte_length": 45
+      },
+      {
+        "area_table_index": 31,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA302",
+        "enemy_data_ptr": "0xA160",
+        "header_bytes": [
+          "0x9B",
+          "0x07"
+        ],
+        "terrain_object_count": 53,
+        "terrain_byte_length": 109,
+        "enemy_object_count": 7,
+        "enemy_byte_length": 17
+      },
+      {
+        "area_table_index": 32,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA36F",
+        "enemy_data_ptr": "0xA171",
+        "header_bytes": [
+          "0x5B",
+          "0x07"
+        ],
+        "terrain_object_count": 68,
+        "terrain_byte_length": 139,
+        "enemy_object_count": 19,
+        "enemy_byte_length": 42
+      },
+      {
+        "area_table_index": 33,
+        "area_type": "Castle",
+        "area_type_id": 3,
+        "area_data_ptr": "0xA3FA",
+        "enemy_data_ptr": "0xA19B",
+        "header_bytes": [
+          "0x5B",
+          "0x06"
+        ],
+        "terrain_object_count": 55,
+        "terrain_byte_length": 113,
+        "enemy_object_count": 9,
+        "enemy_byte_length": 20
+      }
+    ]
+  },
+  "physics_and_collision_tables": {
+    "JumpspringForceData_0xB424": [
+      "0x20",
+      "0x20",
+      "0x1E",
+      "0x28",
+      "0x28",
+      "0x0D",
+      "0x04"
+    ],
+    "FallMForceData_0xB42B": [
+      "0x70",
+      "0x70",
+      "0x60",
+      "0x90",
+      "0x90",
+      "0x0A",
+      "0x09"
+    ],
+    "PlayerYSpdData_0xB432": [
+      "0xFC",
+      "0xFC",
+      "0xFC",
+      "0xFB",
+      "0xFB",
+      "0xFE",
+      "0xFF"
+    ],
+    "InitMForceData_0xB439": [
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x00",
+      "0x80",
+      "0x00"
+    ],
+    "MaxLeftXSpdData_0xB440": [
+      "0xD8",
+      "0xE8",
+      "0xF0"
+    ],
+    "MaxRightXSpdData_0xB443": [
+      "0x28",
+      "0x18",
+      "0x10",
+      "0x0C"
+    ],
+    "FrictionData_0xB447": [
+      "0xE4",
+      "0x98",
+      "0xD0"
+    ],
+    "Climb_Y_SpeedData_0xB44A": [
+      "0x00",
+      "0xFF",
+      "0x01",
+      "0x00"
+    ],
+    "BoundingBoxCoordData_0x9B90": [
+      "0x0C",
+      "0xC0",
+      "0xC0",
+      "0xB0",
+      "0x0B",
+      "0xC0",
+      "0x54",
+      "0xD0",
+      "0x04",
+      "0xC9",
+      "0x50",
+      "0xF0",
+      "0x03",
+      "0x9D",
+      "0xA1",
+      "0x06",
+      "0xE8",
+      "0xE0",
+      "0x0D",
+      "0xB0",
+      "0x06",
+      "0xAC",
+      "0x35",
+      "0x07",
+      "0x88",
+      "0x10",
+      "0xD2",
+      "0x60",
+      "0x20",
+      "0xBB",
+      "0x9B",
+      "0xBD",
+      "0x30",
+      "0x07",
+      "0x18",
+      "0x10",
+      "0x05",
+      "0x98",
+      "0x9D",
+      "0x30",
+      "0x07",
+      "0x38",
+      "0x60",
+      "0xBC",
+      "0x2D",
+      "0x07",
+      "0xB1",
+      "0xE7"
+    ]
+  },
+  "palette_and_vram_tables": {
+    "VRAM_AddrTable_Low_0x859A": [
+      "0x85",
+      "0xAD",
+      "0x44",
+      "0x07",
+      "0x48",
+      "0xAD",
+      "0x56",
+      "0x07",
+      "0x48",
+      "0xA9",
+      "0x00",
+      "0x8D",
+      "0x56",
+      "0x07",
+      "0xA9",
+      "0x02",
+      "0x8D",
+      "0x44",
+      "0x07"
+    ],
+    "VRAM_AddrTable_High_0x85AD": [
+      "0x20",
+      "0xF1",
+      "0x85",
+      "0x68",
+      "0x8D",
+      "0x56",
+      "0x07",
+      "0x68",
+      "0x8D",
+      "0x44",
+      "0x07",
+      "0x4C",
+      "0x45",
+      "0x87",
+      "0x01",
+      "0x02",
+      "0x03",
+      "0x04",
+      "0xAC"
+    ],
+    "BgColorCtrl_Addr_0x85C0": [
+      "0x4E",
+      "0x07",
+      "0xBE",
+      "0xBB",
+      "0x85",
+      "0x8E",
+      "0x73",
+      "0x07"
+    ],
+    "BackgroundColors_0x85C8": [
+      "0x4C",
+      "0x45",
+      "0x87",
+      "0x00",
+      "0x09",
+      "0x0A",
+      "0x04",
+      "0x22"
+    ],
+    "PlayerColors_Mario_0x85CF": [
+      "0x22",
+      "0x22",
+      "0x0F",
+      "0x0F"
+    ],
+    "PlayerColors_Luigi_0x85D3": [
+      "0x0F",
+      "0x22",
+      "0x0F",
+      "0x0F"
+    ],
+    "PlayerColors_Fiery_0x85D7": [
+      "0x22",
+      "0x16",
+      "0x27",
+      "0x18"
+    ],
+    "AreaPalettes_Water_Ground_Underground_Castle_0x8AB0": [
+      "0x06",
+      "0xB9",
+      "0xC7",
+      "0x85",
+      "0x8D",
+      "0x73",
+      "0x07",
+      "0xEE",
+      "0x3C",
+      "0x07",
+      "0xAE",
+      "0x00",
+      "0x03",
+      "0xA0",
+      "0x00",
+      "0xAD",
+      "0x53",
+      "0x07",
+      "0xF0",
+      "0x02",
+      "0xA0",
+      "0x04",
+      "0xAD",
+      "0x56",
+      "0x07",
+      "0xC9",
+      "0x02",
+      "0xD0",
+      "0x02",
+      "0xA0",
+      "0x08",
+      "0xA9",
+      "0x03",
+      "0x85",
+      "0x00",
+      "0xB9",
+      "0xD7",
+      "0x85",
+      "0x9D",
+      "0x04",
+      "0x03",
+      "0xC8",
+      "0xE8",
+      "0xC6",
+      "0x00",
+      "0x10",
+      "0xF4",
+      "0xAE",
+      "0x00",
+      "0x03",
+      "0xAC",
+      "0x44",
+      "0x07",
+      "0xD0",
+      "0x03",
+      "0xAC",
+      "0x4E",
+      "0x07",
+      "0xB9",
+      "0xCF",
+      "0x85",
+      "0x9D",
+      "0x04",
+      "0x03",
+      "0xA9",
+      "0x3F",
+      "0x9D",
+      "0x01",
+      "0x03",
+      "0xA9",
+      "0x10",
+      "0x9D",
+      "0x02",
+      "0x03",
+      "0xA9",
+      "0x04",
+      "0x9D",
+      "0x03",
+      "0x03",
+      "0xA9",
+      "0x00",
+      "0x9D",
+      "0x08",
+      "0x03",
+      "0x8A",
+      "0x18",
+      "0x69",
+      "0x07",
+      "0x8D",
+      "0x00",
+      "0x03",
+      "0x60",
+      "0xAD",
+      "0x33",
+      "0x07",
+      "0xC9",
+      "0x01",
+      "0xD0",
+      "0x05",
+      "0xA9",
+      "0x0B",
+      "0x8D",
+      "0x73",
+      "0x07",
+      "0x4C",
+      "0x45",
+      "0x87",
+      "0xA9",
+      "0x00",
+      "0x20",
+      "0x08",
+      "0x88",
+      "0x4C",
+      "0x45",
+      "0x87",
+      "0x20",
+      "0x30",
+      "0xBC",
+      "0xAE",
+      "0x00",
+      "0x03",
+      "0xA9",
+      "0x20",
+      "0x9D",
+      "0x01",
+      "0x03",
+      "0xA9",
+      "0x73"
+    ]
+  },
+  "chr_rom_embedded_title_screen_0x1EC0_0x1FFF": {
+    "chr_offset_range": "0x1EC0..0x1FFF",
+    "byte_length": 320,
+    "bytes": [
+      "0x20",
+      "0xA6",
+      "0x54",
+      "0x26",
+      "0x20",
+      "0xC6",
+      "0x54",
+      "0x26",
+      "0x20",
+      "0xE6",
+      "0x54",
+      "0x26",
+      "0x21",
+      "0x06",
+      "0x54",
+      "0x26",
+      "0x20",
+      "0x85",
+      "0x01",
+      "0x44",
+      "0x20",
+      "0x86",
+      "0x54",
+      "0x48",
+      "0x20",
+      "0x9A",
+      "0x01",
+      "0x49",
+      "0x20",
+      "0xA5",
+      "0xC9",
+      "0x46",
+      "0x20",
+      "0xBA",
+      "0xC9",
+      "0x4A",
+      "0x20",
+      "0xA6",
+      "0x0A",
+      "0xD0",
+      "0xD1",
+      "0xD8",
+      "0xD8",
+      "0xDE",
+      "0xD1",
+      "0xD0",
+      "0xDA",
+      "0xDE",
+      "0xD1",
+      "0x20",
+      "0xC6",
+      "0x0A",
+      "0xD2",
+      "0xD3",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0xD9",
+      "0xDB",
+      "0xDC",
+      "0xDB",
+      "0xDF",
+      "0x20",
+      "0xE6",
+      "0x0A",
+      "0xD4",
+      "0xD5",
+      "0xD4",
+      "0xD9",
+      "0xDB",
+      "0xE2",
+      "0xD4",
+      "0xDA",
+      "0xDB",
+      "0xE0",
+      "0x21",
+      "0x06",
+      "0x0A",
+      "0xD6",
+      "0xD7",
+      "0xD6",
+      "0xD7",
+      "0xE1",
+      "0x26",
+      "0xD6",
+      "0xDD",
+      "0xE1",
+      "0xE1",
+      "0x21",
+      "0x26",
+      "0x14",
+      "0xD0",
+      "0xE8",
+      "0xD1",
+      "0xD0",
+      "0xD1",
+      "0xDE",
+      "0xD1",
+      "0xD8",
+      "0xD0",
+      "0xD1",
+      "0x26",
+      "0xDE",
+      "0xD1",
+      "0xDE",
+      "0xD1",
+      "0xD0",
+      "0xD1",
+      "0xD0",
+      "0xD1",
+      "0x26",
+      "0x21",
+      "0x46",
+      "0x14",
+      "0xDB",
+      "0x42",
+      "0x42",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0xDB",
+      "0x42",
+      "0x26",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0x42",
+      "0x26",
+      "0x21",
+      "0x66",
+      "0x46",
+      "0xDB",
+      "0x21",
+      "0x6C",
+      "0x0E",
+      "0xDF",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0x26",
+      "0xDB",
+      "0xDF",
+      "0xDB",
+      "0xDF",
+      "0xDB",
+      "0xDB",
+      "0xE4",
+      "0xE5",
+      "0x26",
+      "0x21",
+      "0x86",
+      "0x14",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0xDE",
+      "0x43",
+      "0xDB",
+      "0xE0",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0x26",
+      "0xDB",
+      "0xE3",
+      "0xDB",
+      "0xE0",
+      "0xDB",
+      "0xDB",
+      "0xE6",
+      "0xE3",
+      "0x26",
+      "0x21",
+      "0xA6",
+      "0x14",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0x42",
+      "0xDB",
+      "0xDB",
+      "0xDB",
+      "0xD4",
+      "0xD9",
+      "0x26",
+      "0xDB",
+      "0xD9",
+      "0xDB",
+      "0xDB",
+      "0xD4",
+      "0xD9",
+      "0xD4",
+      "0xD9",
+      "0xE7",
+      "0x21",
+      "0xC5",
+      "0x16",
+      "0x5F",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x95",
+      "0x97",
+      "0x98",
+      "0x78",
+      "0x95",
+      "0x96",
+      "0x95",
+      "0x95",
+      "0x97",
+      "0x98",
+      "0x97",
+      "0x98",
+      "0x95",
+      "0x7A",
+      "0x21",
+      "0xED",
+      "0x0E",
+      "0xCF",
+      "0x01",
+      "0x09",
+      "0x08",
+      "0x05",
+      "0x24",
+      "0x17",
+      "0x12",
+      "0x17",
+      "0x1D",
+      "0x0E",
+      "0x17",
+      "0x0D",
+      "0x18",
+      "0x22",
+      "0x4B",
+      "0x0D",
+      "0x01",
+      "0x24",
+      "0x19",
+      "0x15",
+      "0x0A",
+      "0x22",
+      "0x0E",
+      "0x1B",
+      "0x24",
+      "0x10",
+      "0x0A",
+      "0x16",
+      "0x0E",
+      "0x22",
+      "0x8B",
+      "0x0D",
+      "0x02",
+      "0x24",
+      "0x19",
+      "0x15",
+      "0x0A",
+      "0x22",
+      "0x0E",
+      "0x1B",
+      "0x24",
+      "0x10",
+      "0x0A",
+      "0x16",
+      "0x0E",
+      "0x22",
+      "0xEC",
+      "0x04",
+      "0x1D",
+      "0x18",
+      "0x19",
+      "0x28",
+      "0x22",
+      "0xF6",
+      "0x01",
+      "0x00",
+      "0x23",
+      "0xC9",
+      "0x56",
+      "0x55",
+      "0x23",
+      "0xE2",
+      "0x04",
+      "0x99",
+      "0xAA",
+      "0xAA",
+      "0xAA",
+      "0x23",
+      "0xEA",
+      "0x04",
+      "0x99",
+      "0xAA",
+      "0xAA",
+      "0xAA",
+      "0x00",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF",
+      "0xFF"
+    ]
+  }
+}

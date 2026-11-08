@@ -1,0 +1,6 @@
+# Build intermediate directories
+SuperMarioBros_Win11/obj/
+.vs/
+*.user
+*.suo
+*.tmp
