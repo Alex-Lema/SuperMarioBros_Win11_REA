@@ -29,12 +29,11 @@ namespace SuperMarioBros_Win11
 
             try
             {
-                SmbRomImage rom = SmbRomImage.LoadFromDefaultLocations();
                 var memory = new SmbMemory();
-                var ppu = new Ppu2C02Renderer(rom);
+                var ppu = new Ppu2C02Renderer();
                 var apu = new Apu2A03Synthesizer();
                 using var input = new WindowsGamingInputService();
-                var engine = new SmbEngineCore(rom, memory, ppu, apu, input);
+                var engine = new SmbEngineCore(memory, ppu, apu, input);
 
                 HardwareCapabilities caps = HardwareCapabilities.Detect(engine, args);
 
@@ -56,7 +55,7 @@ namespace SuperMarioBros_Win11
                     return 1;
                 }
                 MessageBox.Show(
-                    $"Error al iniciar Super Mario Bros. (Windows 11 Port):\n\n{ex.Message}",
+                    $"Error al iniciar Super Mario Bros. (Windows 11 Port Nativo):\n\n{ex.Message}",
                     "Error de Inicialización",
                     MessageBoxButtons.OK,
                     MessageBoxIcon.Error);
@@ -66,20 +65,19 @@ namespace SuperMarioBros_Win11
 
         private static int RunAutomatedVerification(SmbEngineCore engine, HardwareCapabilities caps)
         {
-            Console.WriteLine("=== SUPER MARIO BROS. WIN11 PORT - SELF-TEST VERIFICATION ===");
-            Console.WriteLine($"[ROM] Source: {engine.Rom.SourcePath}");
-            Console.WriteLine($"[ROM] SHA-256: {engine.Rom.RomSha256}");
+            Console.WriteLine("=== SUPER MARIO BROS. WIN11 100% NATIVE STATIC RECOMPILED PORT - VERIFICATION ===");
+            Console.WriteLine("[BIN] Architecture: 100% Native Statically Recompiled C# (No external .nes ROM or opcode interpreter)");
             Console.WriteLine($"[WGI] {engine.Input.GetStatusDescription()}");
             Console.WriteLine($"[HW ] {caps.CapabilityDiagnosticSummary}");
 
             var sw = Stopwatch.StartNew();
-            for (int f = 0; f < 120; f++)
+            // Simular 600 frames (Pantalla de Título + inicio de Demo de World 1-1) para verificar ambos bancos de juego y física
+            for (int f = 0; f < 600; f++)
             {
                 engine.StepOneFrame60Hz(IntPtr.Zero, savePrevFor120Hz: true);
             }
             sw.Stop();
 
-            // Verificar que el Title Screen fue dibujado en el Framebuffer PPU y que el escalador 1080p funciona
             uint[] highRes1080p = new uint[1920 * 1080];
             engine.Ppu.UpscaleToHighResBuffer(
                 engine.Ppu.Framebuffer60Hz,
@@ -101,9 +99,9 @@ namespace SuperMarioBros_Win11
             short[] audioSamples = new short[800];
             engine.Apu.RenderPcm16Samples(audioSamples, 0, audioSamples.Length);
 
-            Console.WriteLine($"[SIM] 120 frames simulated in {sw.Elapsed.TotalMilliseconds:F2} ms ({120000.0 / sw.Elapsed.TotalMilliseconds:F1} FPS avg)");
-            Console.WriteLine($"[RAM] WarmBootValidation ($07FF)=0x{engine.Memory.WarmBootValidation:X2}, OperMode ($0770)={engine.Memory.OperMode}, OperMode_Task ($0772)={engine.Memory.OperMode_Task}, FrameCounter ($0009)={engine.Memory.FrameCounter}");
-            Console.WriteLine($"[PPU] Non-black pixels: {nonBlackPixels}/61440 | Distinct title screen pixels: {distinctPixels}/61440 | 1080p Upscale: OK");
+            Console.WriteLine($"[SIM] 600 native frames executed in {sw.Elapsed.TotalMilliseconds:F2} ms ({600000.0 / sw.Elapsed.TotalMilliseconds:F1} FPS avg)");
+            Console.WriteLine($"[RAM] WarmBootValidation ($07FF)=0x{engine.Memory.WarmBootValidation:X2}, OperMode ($0770)={engine.Memory.OperMode}, OperMode_Task ($0772)={engine.Memory.OperMode_Task}, Player_X ($0086)={engine.Memory.Player_X_Position}");
+            Console.WriteLine($"[PPU] Non-black pixels: {nonBlackPixels}/61440 | Distinct pixels: {distinctPixels}/61440 | 1080p Upscale: OK");
 
             return (engine.Memory.WarmBootValidation == 0xA5 && distinctPixels > 1000) ? 0 : 2;
         }

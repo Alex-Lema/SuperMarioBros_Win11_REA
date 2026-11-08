@@ -2,6 +2,7 @@ using System;
 using System.Runtime.CompilerServices;
 using System.Threading.Tasks;
 using SuperMarioBros_Win11.Core;
+using SuperMarioBros_Win11.Recompiled;
 
 namespace SuperMarioBros_Win11.Graphics
 {
@@ -15,7 +16,7 @@ namespace SuperMarioBros_Win11.Graphics
     /// <summary>
     /// Renderizador Nativo PPU 2C02 de Alta Resolución con soporte de Split-Screen (Sprite 0),
     /// Interpolación Sub-Frame para 120 FPS y Escalado Directo a 720p/900p/1080p/1440p/4K.
-    /// Implementa la Sección 4 de DOC_DISENO_PORT_WIN11_ARQUITECTURA.md.
+    /// Utiliza directamente los activos estáticos compilados en SmbEmbeddedAssets (sin archivos ROM externos).
     /// </summary>
     public sealed unsafe class Ppu2C02Renderer
     {
@@ -35,7 +36,6 @@ namespace SuperMarioBros_Win11.Graphics
             0xFFE9DE86, 0xFFC7E992, 0xFFA8EEB0, 0xFF95ECD9, 0xFF91E4FE, 0xFFACACAC, 0xFF000000, 0xFF000000
         };
 
-        private readonly SmbRomImage _rom;
         private readonly byte[] _nameTables = new byte[2 * 0x0400]; // 2 KB VRAM (Mirroring Vertical: NT0=$2000, NT1=$2400)
         private readonly byte[] _paletteRam = new byte[32];         // $3F00..$3F1F
         public readonly byte[] Oam = new byte[256];                 // 64 sprites * 4 bytes
@@ -68,9 +68,8 @@ namespace SuperMarioBros_Win11.Graphics
         public bool NmiEnabled => (_ppuCtrl & 0x80) != 0;
         public bool NmiPending { get; set; }
 
-        public Ppu2C02Renderer(SmbRomImage rom)
+        public Ppu2C02Renderer()
         {
-            _rom = rom;
             Reset();
         }
 
@@ -216,7 +215,7 @@ namespace SuperMarioBros_Win11.Graphics
         {
             if (addr < 0x2000)
             {
-                return _rom.ChrRom[addr];
+                return SmbEmbeddedAssets.ChrTableData[addr];
             }
             if (addr < 0x3F00)
             {
@@ -305,14 +304,14 @@ namespace SuperMarioBros_Win11.Graphics
                         int x = spr0X + dx;
                         if (x >= 255) break;
                         int colInSpr = ((attr & 0x40) != 0) ? (7 - dx) : dx;
-                        if (_rom.DecodedChrPixels[sprPixelBase + colInSpr] == 0) continue;
+                        if (SmbEmbeddedAssets.DecodedChrPixels[sprPixelBase + colInSpr] == 0) continue;
 
                         int worldX = ((baseNt * 256) + _scrollX + x) & 0x1FF;
                         int ntIdx = (worldX >> 8) & 1;
                         int tileX = (worldX & 0xFF) >> 3;
                         int fineX = worldX & 7;
                         byte bgTile = _nameTables[(ntIdx * 0x0400) + (tileY * 32) + tileX];
-                        byte bgPx = _rom.DecodedChrPixels[((bgTable + bgTile) * 64) + (fineY * 8) + fineX];
+                        byte bgPx = SmbEmbeddedAssets.DecodedChrPixels[((bgTable + bgTile) * 64) + (fineY * 8) + fineX];
                         if (bgPx != 0)
                         {
                             _ppuStatus |= 0x40; // Impacto de Sprite 0 detectado
@@ -338,7 +337,7 @@ namespace SuperMarioBros_Win11.Graphics
             uint backdropColor = NesMasterPalette[_paletteRam[0] & 0x3F];
 
             fixed (uint* pFb = targetFb)
-            fixed (byte* pChr = _rom.DecodedChrPixels)
+            fixed (byte* pChr = SmbEmbeddedAssets.DecodedChrPixels)
             fixed (byte* pNt = _nameTables)
             fixed (byte* pPal = _paletteRam)
             fixed (byte* pBgOpaque = _bgOpaqueLine)

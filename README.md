@@ -4,8 +4,11 @@ Este repositorio contiene el análisis completo de ingeniería inversa de **Supe
 
 ---
 
-## Características Principales de la Versión Windows 11 (`SuperMarioBros_Win11`)
+## Características Principales de la Versión 100% Nativa para Windows 11 (`SuperMarioBros_Win11`)
 
+- **Recompilación Estática 100% Nativa en C# (Sin Emulador ni Carga de Archivos ROM `.nes`)**:
+  - Todas las **533 subrutinas y 18 tablas `JumpEngine`** identificadas durante la ingeniería inversa han sido traducidas estáticamente (Ahead-of-Time Static Binary Translation) a código C# nativo en `SuperMarioBros_Win11/src/Recompiled/` (`SmbRecompiledBank_0_8000_9FFF.cs`, `SmbRecompiledBank_1_A000_BFFF.cs`, `SmbRecompiledBank_2_C000_DFFF.cs`, `SmbRecompiledBank_3_E000_FFFF.cs`), compilado directamente a código máquina x64 por RyuJIT sin ningún intérprete de opcodes ni carga de archivos `.nes` externos.
+  - Todos los gráficos (512 tiles pre-decodificados) y tablas de datos (34 niveles, enemigos, física en coma fija, cajas de colisión, paletas y secuencias musicales) están integrados estáticamente en `SmbEmbeddedAssets.cs`.
 - **Controlador de Juegos Nativo con `Windows.Gaming.Input` y Latencia Mínima**:
   - Integración directa mediante invocación nativa COM/WinRT (`RoGetActivationFactory` + punteros de función `delegate* unmanaged[Stdcall]`) con **`Windows.Gaming.Input.Gamepad`** (`IGamepadStatics` / `IGamepad`) y **`Windows.Gaming.Input.RawGameController`** (`IRawGameControllerStatics` / `IRawGameController`), sin asignaciones en el heap (Zero-GC) y combinada con muestreo instantáneo de teclado (`GetAsyncKeyState`).
 - **Resoluciones Altas de Windows 11**:

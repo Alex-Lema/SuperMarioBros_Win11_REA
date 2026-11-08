@@ -101,8 +101,19 @@ namespace SuperMarioBros_Win11.Platform
                 Marshal.FreeHGlobal(devModePtr);
             }
 
-            // 3. Micro-benchmark real de CPU + Escalado 1080p (simulación + renderizado PPU + escalado HD)
+            // 3. Micro-benchmark real de CPU + Escalado HD (con calentamiento previo de JIT)
             uint[] benchHighRes = new uint[1280 * 720];
+            for (int w = 0; w < 2; w++)
+            {
+                engineForBenchmark.Ppu.ComposeFrame(isInterpolated120HzSubFrame: false);
+                engineForBenchmark.Ppu.UpscaleToHighResBuffer(
+                    engineForBenchmark.Ppu.Framebuffer60Hz,
+                    benchHighRes,
+                    1280,
+                    720,
+                    AspectScaleMode.Aspect4x3Pillarbox,
+                    crtScanlinesEffect: false);
+            }
             var sw = Stopwatch.StartNew();
             const int benchFrames = 6;
             for (int i = 0; i < benchFrames; i++)
